@@ -70,8 +70,8 @@ def parse_page(soup, page_url):
                 "가격": price,
                 "평점": rating,
                 "재고여부": availability,
-                "출처페이지": page_url,
-                "수집시각": pd.Timestamp.now(tz="UTC").isoformat(),
+                "source_page_url": page_url,
+                "crawled_at_utc": pd.Timestamp.now(tz="UTC").isoformat(),
             })
         except (AttributeError, TypeError, KeyError) as e:
             logger.warning("행 파싱 실패(%s), 해당 항목 건너뜀 (page=%s)", e, page_url)
