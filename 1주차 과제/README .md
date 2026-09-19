@@ -94,7 +94,7 @@ python crawler.py
 <img width="1018" height="320" alt="image" src="https://github.com/user-attachments/assets/bc2cbc70-b00c-4401-804f-6a3917bd2e79" />
 
 
-<img width="1430" height="1098" alt="image" src="https://github.com/user-attachments/assets/b9879571-dacc-4794-a490-e6ee1632d92d" />
+<img width="1494" height="964" alt="image" src="https://github.com/user-attachments/assets/06f5fd05-5bb3-4934-ae0f-6356e825f23e" />
 
 
 ## 결과 및 해석
