@@ -11,7 +11,8 @@
 
 [#대상-사이트-bookstoscrapecom](#대상-사이트-bookstoscrapecom)
 
-![여기에 books.toscrape.com 목록 페이지 스크린샷 삽입](스크린샷_경로.png)
+<img width="2872" height="1452" alt="image" src="https://github.com/user-attachments/assets/8f748db1-e331-4544-8f93-36ecbc28a70a" />
+
 
 - 웹 크롤링 연습을 위해 공식적으로 운영되는 목(mock) 온라인 서점.
 - 로그인·결제 등 민감한 기능이 없고 페이지 구조가 단순해 수업에서 배운
@@ -57,7 +58,7 @@ next_url = urljoin(page_url, next_link["href"]) if next_link else None
 
 [#예외-처리-및-로깅](#예외-처리-및-로깅)
 
-![여기에 logs/crawl.log 실행 로그 스크린샷 삽입](스크린샷_경로.png)
+<img width="1324" height="774" alt="image" src="https://github.com/user-attachments/assets/e1332aca-3879-4e06-864a-421cc2d68504" />
 
 - 요청마다 timeout(연결 5초/응답 20초)을 걸고, 403·429 응답이 오면 즉시
   크롤링을 중단하도록 했다 (과제 원칙 준수).
@@ -90,9 +91,11 @@ python crawler.py
 
 [#실행화면](#실행화면)
 
-![여기에 터미널 실행 결과(5점 만점 책 비율 출력) 스크린샷 삽입](스크린샷_경로.png)
+<img width="1018" height="320" alt="image" src="https://github.com/user-attachments/assets/bc2cbc70-b00c-4401-804f-6a3917bd2e79" />
 
-![여기에 data/result.csv를 엑셀로 연 화면 스크린샷 삽입](스크린샷_경로.png)
+
+<img width="1430" height="1098" alt="image" src="https://github.com/user-attachments/assets/b9879571-dacc-4794-a490-e6ee1632d92d" />
+
 
 ## 결과 및 해석
 
