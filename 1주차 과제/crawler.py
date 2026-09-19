@@ -109,6 +109,18 @@ def clean(records):
 
     df = pd.DataFrame(records).drop_duplicates()
 
+df["가격"] = pd.to_numeric(df["가격"], errors="coerce")
+
+assert pd.api.types.is_numeric_dtype(df["가격"])
+assert pd.api.types.is_string_dtype(df["제목"])
+assert pd.api.types.is_string_dtype(df["평점"])
+assert pd.api.types.is_string_dtype(df["재고여부"])
+assert pd.api.types.is_string_dtype(df["source_page_url"])
+assert pd.api.types.is_string_dtype(df["crawled_at_utc"])
+
+logger.info("자료형 점검 완료")
+logger.info("\n%s", df.dtypes)
+
     before = len(df)
     df = df.dropna(subset=["제목", "가격", "평점"])  
     dropped = before - len(df)
@@ -119,7 +131,6 @@ def clean(records):
 
 
 def analyze(df):
-    """질문: 5점 만점(별 5개) 책의 비율은?"""
     counts = df["평점"].value_counts()
     five_star_ratio = counts.get("Five", 0) / len(df) * 100
     logger.info("평점별 분포:\n%s", counts.to_string())
